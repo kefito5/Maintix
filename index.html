@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maintix | Mantenimiento de PC e impresoras</title>
+    <meta name="description"
+        content="Mantenimiento de computadoras e impresoras y activación de Windows y Office, y creación de páginas web en San Isidro de San Ramón.">
+    <link rel="icon" href="logo/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Pantalla de bienvenida -->
+    <div id="intro" aria-hidden="true">
+        <svg viewBox="0 0 100 115" class="intro-hex">
+            <polygon points="50,3 96,29 96,86 50,112 4,86 4,29" />
+        </svg>
+        <span>Maintix</span>
+    </div>
+
+    <div id="progress"></div>
+    <canvas id="bg" aria-hidden="true"></canvas>
+
+    <header id="top">
+        <div class="wrap">
+            <a class="brand" href="#inicio" aria-label="Maintix, inicio">
+                <!-- LOGO: pon tu imagen en la carpeta img/ con el nombre logo/logo.png -->
+                <img src="logo/logo.png" alt="Logo de Maintix" width="38" height="38">
+                Maintix
+            </a>
+            <nav aria-label="Principal">
+                <a href="#servicios">Servicios</a>
+                <a href="#proceso">Cómo trabajamos</a>
+                <a href="#porque">Por qué Maintix</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <a class="btn sm wa-link" href="#">Escríbenos</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero" id="inicio">
+            <div class="wrap">
+                <div class="hero-text">
+                    <h1 class="reveal">Dale nueva vida a tu <span class="typed" id="typed"></span><span
+                            class="caret"></span></h1>
+                    <p class="reveal">Mantenimiento de PC e impresoras, activación de Windows y Office, y páginas web
+                        para tu negocio. Tráenos tu equipo y te lo devolvemos listo.</p>
+                    <a class="btn big reveal wa-link" href="#">Escríbenos por WhatsApp</a>
+                    <small class="reveal"></small>
+                </div>
+                <div class="hero-logo reveal" id="heroLogo">
+                    <!-- LOGO grande: misma imagen, logo/logo.png -->
+                    <img src="logo/logo.png" alt="Logo de Maintix: monitor e impresora dentro de un hexágono"
+                        width="360" height="360">
+                </div>
+            </div>
+        </div>
+
+        <section id="servicios" class="alt">
+            <div class="wrap">
+                <h2 class="reveal">Qué hacemos</h2>
+                <p class="lead reveal">Los equipos los recibimos en nuestro taller: tú nos los traes, nosotros nos
+                    encargamos.</p>
+                <div class="services">
+                    <article class="svc reveal">
+                        <h3>Windows y Office</h3>
+                        <ul>
+                            <li>Activación de licencias de Windows</li>
+                            <li>Activación de licencias de Office</li>
+                            <li>Instalación y configuración</li>
+                        </ul>
+                    </article>
+                    <article class="svc reveal">
+                        <h3>Mantenimiento de PC</h3>
+                        <ul>
+                            <li>Limpieza interna y cambio de pasta térmica</li>
+                            <li>Revisión de hardware y software</li>
+                            <li>Eliminación de lentitud y virus</li>
+                            <li>Instalación de programas</li>
+                        </ul>
+                    </article>
+                    <article class="svc reveal">
+                        <h3>Mantenimiento de impresoras</h3>
+                        <ul>
+                            <li>Limpieza y revisión general</li>
+                            <li>Solución de atascos y manchas</li>
+                            <li>Configuración en tu computadora</li>
+                            <li>Revisión de cabezales y calidad de impresión</li>
+                        </ul>
+                    </article>
+                    <article class="svc reveal">
+                        <h3>Páginas web</h3>
+                        <ul>
+                            <li>Diseño de páginas web para tu negocio</li>
+                            <li>Publicación y ayuda para mantenerla actualizada</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="proceso">
+            <div class="wrap">
+                <h2 class="reveal">Cómo trabajamos</h2>
+                <p class="lead reveal">Un proceso simple, sin sorpresas.</p>
+                <ol class="steps">
+                    <li class="reveal">
+                        <h3>Nos escribes</h3>
+                        <p>Cuéntanos qué le pasa a tu equipo por WhatsApp y coordinamos cuándo traerlo.</p>
+                    </li>
+                    <li class="reveal">
+                        <h3>Lo revisamos</h3>
+                        <p>Hacemos el diagnóstico y te explicamos qué tiene y cuánto cuesta, antes de empezar.</p>
+                    </li>
+                    <li class="reveal">
+                        <h3>Lo recoges listo</h3>
+                        <p>Te avisamos cuando está terminado y lo pasas a retirar.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="porque" class="alt">
+            <div class="wrap">
+                <h2 class="reveal">Por qué Maintix</h2>
+                <p class="lead reveal">Un servicio técnico claro y de confianza.</p>
+                <div class="why">
+                    <div class="reveal">
+                        <h3>Diagnóstico antes de cobrar</h3>
+                        <p>Sabes qué se va a hacer y el precio antes de empezar.</p>
+                    </div>
+                    <div class="reveal">
+                        <h3>Todo en un solo lugar</h3>
+                        <p>Computadora, impresora, Windows y Office con la misma persona.</p>
+                    </div>
+                    <div class="reveal">
+                        <h3>Trato directo</h3>
+                        <p>Hablas con quien repara tu equipo, sin intermediarios.</p>
+                    </div>
+                    <div class="reveal">
+                        <h3>Respuesta rápida</h3>
+                        <p>Te contestamos por WhatsApp y te avisamos apenas esté listo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="wrap">
+                <div class="contact reveal">
+                    <div>
+                        <h2>¿Tu equipo necesita atención?</h2>
+                        <p>Escríbenos y te decimos cuándo puedes traerlo.</p>
+                        <p><a class="btn wa-link" href="#">Abrir WhatsApp</a></p>
+                    </div>
+                    <dl>
+                        <div>
+                            <dt>WhatsApp</dt>
+                            <dd>+506 8447 5235</dd>
+                        </div>
+                        <div>
+                            <dt>Ubicación del taller</dt>
+                            <dd>San Isidro de San Ramón, Alajuela, Costa Rica</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>© <span id="year">2026</span> Maintix. Mantenimiento de PC e impresoras.</footer>
+
+    <a class="btn wa wa-link" href="#" aria-label="Escribir por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+                d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.300c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.4-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.100 1.1 1 2 1.300 2.300 1.400.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.900.9c.3.1.5.2.5.3.1.2.1.7-.1 1.200Z" />
+        </svg>
+        WhatsApp
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

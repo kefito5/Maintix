@@ -115,3 +115,16 @@ footer{padding:28px 0 100px;color:var(--muted);font-size:14px;text-align:center}
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+.map{grid-column:1/-1;height:320px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.2)}
+.map iframe{width:100%;height:100%;border:0}
+.map{grid-column:1/-1;height:320px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.2);position:relative;
+  clip-path:circle(0% at 50% 50%);
+  transition:opacity .8s,transform .8s,clip-path 1.5s cubic-bezier(.77,0,.18,1)}
+.map.in{clip-path:circle(100% at 50% 50%)}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(1) contrast(1.1);transition:filter 1.4s .5s}
+.map.in iframe{filter:none}
+.map::after{content:"";position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;
+  border:3px solid var(--teal);border-radius:50%;pointer-events:none;opacity:0}
+.map.in::after{animation:ping 2.2s 1.4s infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:.9}100%{transform:scale(3.2);opacity:0}}
+@media(prefers-reduced-motion:reduce){.map{clip-path:none}.map iframe{filter:none}.map::after{display:none}}
